@@ -1,18 +1,14 @@
-Awesome Docker Compose
+Docker Compose Stacks used within the voxda.io tutorials
 ---
 
-## What is this?
-
-This is a collection of docker compose stacks for daily software development work.
-It becomes handy when you want to run a stack of docker containers and you don't want to write a docker compose file for
-it.
-There are many docker compose files available on the internet but they are not well maintained and they are not up to
-date.
-This repository is a collection of docker compose files that are well maintained and up to date.
+## Overview
+This repo contains docker compose stacks for popular tools within the devops community.  As voxda.io adds new articles as part of its "DevOps Sucks" series new stacks will be added.  
 
 ## What is docker compose?
 
-Docker compose is a tool for defining and running multi-container Docker applications.
+Docker compose is a tool for defining and running multi-container Docker applications with a single command.  Its great for DevOps local development due to the amount of tools that have to run together.  
+
+Learn more at Docker.com Docs: [Compose Docs](https://docs.docker.com/compose/)  
 
 ## How to use?
 
@@ -32,22 +28,18 @@ use `-d` to start compose in detach mode
 
 | Stack                            | Standalone | Cluster |
 |----------------------------------|------------|---------|
+| Prometheus + Grafana             | ✅          |         |
+| Prometheus Push Gateway          | ✅          |         |
+| Jaeger                           | ✅          |         |
+| SonarQube                        | ✅          |         |
 | Apache Kafka                     | ✅          | ✅       |
 | Debezium - Postgres              | ✅          |         |
 | Debezium - MySQL                 | ✅          |         |
-| Jaeger                           | ✅          |         |
 | Postgres                         | ✅          | ✅       |
-| Prometheus + Grafana             | ✅          |         |
-| Prometheus Push Gateway          | ✅          |         |
-| [ScyllaDB](./scylladb/Readme.md) | ✅          | ✅       |
-| SonarQube                        | ✅          |         |
-| KSQLDB      [WIP]                |           |         |
-| MySQL      [WIP]                 |           |         |
-| MongoDB      [WIP]               |           |         |
 
 ## How to contribute
 
-Raise a pull request if you are using docker compose stack and automated it for your daily software development work.
-Happy to review and merge!
-Cheers :D
+Raise a pull request for new devops tools or improvements to the current stacks.  
 
+## Credit
+This repo was forked from [ninadingole/docker-compose-stacks](https://github.com/ninadingole/docker-compose-stacks). Check out their repo for other credit stacks.

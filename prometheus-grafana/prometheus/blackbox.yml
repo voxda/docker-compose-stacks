@@ -1,8 +1,11 @@
 modules:
-  http_2xx:
+  http:
     prober: http
     timeout: 5s
     http:
-      valid_http_versions: [ "HTTP/1.1", "HTTP/2"]
-      valid_status_codes: [200]  # List of valid HTTP status codes. Empty list means any status code is valid.
+      valid_http_versions: [ HTTP/1.1, HTTP/2]
+      valid_status_codes: [200]
       method: GET
+      tls_config:
+        insecure_skip_verify: false
+      preferred_ip_protocol: "ip4"

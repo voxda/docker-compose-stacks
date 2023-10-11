@@ -28,6 +28,32 @@ alerting:
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
 
+  - job_name: 'blackbox'
+    metrics_path: '/probe'
+    params:
+      module: [http]
+    static_configs:
+      - targets:
+        - 'http://example.com'
+        - 'http://example.org'
+        - 'http://example.net'
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 'host.docker.internal:9115'
+
+  # - job_name: example
+  #   scrape_interval: 30s
+  #   metrics_path: '/'
+  #   static_configs:
+  #     - targets: 
+  #       - 'example.com'
+  #       - 'example.net'
+  #       - 'example.org'
+
   - job_name: app
     scrape_interval: 5s
     static_configs:

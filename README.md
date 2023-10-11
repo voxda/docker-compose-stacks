@@ -42,4 +42,4 @@ use `-d` to start compose in detach mode
 Raise a pull request for new devops tools or improvements to the current stacks.  
 
 ## Credit
-This repo was forked from [ninadingole/docker-compose-stacks](https://github.com/ninadingole/docker-compose-stacks). Check out their repo for other credit stacks.
+This repo was forked from [ninadingole/docker-compose-stacks](https://github.com/ninadingole/docker-compose-stacks). Check out their repo for other stacks.
